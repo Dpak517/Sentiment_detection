@@ -4,7 +4,7 @@ from transformers import pipeline
 @st.cache_resource
 def load():
     return pipeline("text-classification",
-                    model="Deepakwithnotverma/bert-finetuned-sentiment", top_k=None)
+                    model="Deepakwithnotverma/bert-sentiment_nlp_sec", top_k=None)
 
 clf = load()
 st.title("Emotion Classifier")
