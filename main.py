@@ -8,7 +8,7 @@ def load():
 
 clf = load()
 st.title("Emotion Classifier")
-text = st.text_area("Enter text", "i feel so happy today")
+text = st.text_area("Enter text")
 if st.button("Predict"):
     res = clf(text)
     scores = res[0] if isinstance(res[0], list) else res
